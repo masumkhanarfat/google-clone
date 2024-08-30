@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #FFF;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.container header{
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+}
+.container header .nav-left img{
+  display: none;
+}
+.container header .nav,
+.container header .nav-left, 
+.container header .nav-right
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container header .nav-left ul,
+.container header .nav-righ ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container header .nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container header ul li{
+  list-style: none;
+  margin-left: 20px;
+}
+.container header ul li:nth-child(1) a {
+  display: none;
+}
+.container header ul li a{
+  text-decoration: none;
+  color: #111;
+  font-size: 13px;
+}
+.container header ul li button{
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 14px;
+  border: none; outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #0B57D0;
+}
+
+
+
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 580px;
+  margin-top: 250px;
+}
+.main .searchBox{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+}
+.main .searchBox .search{
+  width: 100%;
+  height: 100%;
+  padding: 13px;
+  padding-left: 45px;
+  padding-right: 90px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  font-size: 15px;
+}
+.main .searchBox .icons{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  pointer-events: none;
+}
+.main .searchBox .icons .sBtn{
+  padding-top: 5px;
+  width: 22px;
+}
+.main .searchBox .icons .mic-lens{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main .searchBox .icons div img{
+  width: 30px;
+}
+
+.main .buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+}
+.main .buttons button{
+  color: #111;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  border-radius: 3px;
+}
+.main .language{
+  display: flex;
+  margin-top: 25px;
+  gap: 15px;
+}
+.main .language li{
+  list-style-type: none;
+}
+.main .language li a{
+  color: #0B57D0;
+  text-decoration: none;
+}
+
+/* Footer Customize */
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #F2F2F2;
+}
+.mobile{
+  display: none;
+}
+footer .row{
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 25px;
+}
+footer .row.row1 p{
+  color: #5f6368;
+  font-size: 15px;
+}
+footer .row.row2{
+  display: flex;
+  justify-content: space-around;
+}
+footer .row.row2 ul{
+  display: flex;
+}
+footer .row.row2 ul li{
+  list-style-type: none;
+}
+footer .row.row2 ul li a{
+  text-decoration: none;
+  color: #5f6368;
+  font-size: 14px;
+  margin-right: 25px;
+}
+
+/* now, make it responsive */
+@media (max-width: 768px) {
+  .container header{
+    justify-content: space-between;
+  }
+  .container header .nav-left ul li a{
+    text-transform: uppercase;
+  }
+  .container header .nav-left ul li:nth-child(1) a{
+    color: #0B57D0;
+    border-bottom: 2px solid #0B57D0;
+  }
+  .container header .nav-left img {
+    display: block;
+    width: 30px;
+  }
+  .container header ul li:nth-child(1) a {
+    display: block;
+  }
+  .container header ul li:nth-child(2) a{
+    display: none;
+  }
+  .main{
+    margin: 0 5%;
+    justify-content: center;
+  }
+  .main .searchBox {
+    height: 40px;
+    margin-top: 20px;
+  }
+  .main img{
+    width: 45%;
+  }
+  .main .buttons{
+    display: none;
+  }
+  
+  
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .mobile .row {
+    padding: 10px 25px;
+  }
+  .mobile .row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mobile .row2 ul li a{
+    font-size: 10px;
+  }
+  .mobile .row2 div{
+    margin-bottom: 15px;
+ }
+  .mobile .row2 div:nth-child(2) {
+    margin-bottom: 0;
+}
+}
